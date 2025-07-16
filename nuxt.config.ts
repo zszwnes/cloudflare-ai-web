@@ -22,7 +22,7 @@ export default defineNuxtConfig({
                 },
                 {
                     name: 'description',
-                    content: 'Integrated web platform supporting GeminiPro/Cloudflare Workers AI/ChatGPT by Jazee6'
+                    content: 'Integrated web platform supporting Gemini Pro/Cloudflare Workers AI/ChatGPT by Jazee6'
                 }
             ],
             link: [
@@ -30,20 +30,12 @@ export default defineNuxtConfig({
                     rel: 'manifest',
                     href: '/manifest.json'
                 }
-            ]
-        }
-    },
-    vite: {
-        build: {
-            rollupOptions: {
-                output: {
-                    manualChunks: (id) => {
-                        if (id.includes('node_modules')) {
-                            return 'vendor'
-                        }
-                    }
+            ],
+            noscript: [
+                {
+                    innerHTML: 'This website requires JavaScript.'
                 }
-            }
+            ]
         }
     },
     i18n: {
@@ -53,7 +45,7 @@ export default defineNuxtConfig({
     }
     // nitro: {
     //     vercel: {
-    //         regions: ["cle1", "iad1", "pdx1", "sfo1", "sin1", "syd1", "hnd1", "kix1"]
+    //         regions: ["sin1", "syd1", "sfo1", "iad1", "pdx1", "cle1"]
     //     }
     // }
 })
